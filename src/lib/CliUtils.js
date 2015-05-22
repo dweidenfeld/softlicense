@@ -12,7 +12,9 @@ export function usage() {
             "generate"
                 --startDate yyyy-mm-dd
                 --endDate yyyy-mm-dd
-                --modules moduleA,moduleB,moduleC`);
+                --modules moduleA,moduleB,moduleC
+            "check"
+                --license [license]`);
 }
 
 export function getParams() {
