@@ -1,0 +1,35 @@
+{
+  "name": "master-module",
+  "version": "1.0.0",
+  "description": "Master module/skeleton for javascript projects",
+  "main": "dist/plain/main.js",
+  "scripts": {
+    "clean": "grunt clean",
+    "test": "grunt test",
+    "lint": "grunt lint",
+    "build": "grunt build",
+    "compress": "grunt compress",
+    "watch": "grunt watch",
+    "default": "npm run clean && npm run test && npm run lint && npm run build && npm run compress"
+  },
+  "author": "Dominik Weidenfeld",
+  "devDependencies": {
+    "babel": "^5.1.13",
+    "grunt": "^0.4.5",
+    "grunt-babel": "^5.0.0",
+    "grunt-cli": "^0.1.13",
+    "grunt-contrib-clean": "^0.6.0",
+    "grunt-contrib-jshint": "^0.11.2",
+    "grunt-contrib-uglify": "^0.9.1",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-jspacker": "^0.1.1",
+    "grunt-mocha-test": "^0.12.7",
+    "jshint-stylish": "^1.0.1",
+    "load-grunt-tasks": "^3.1.0",
+    "mocha": "^2.2.4"
+  },
+  "dependencies": {
+    "jquery": "^2.1.3",
+    "jquery-ui": "^1.10.5"
+  }
+}
