@@ -1,8 +1,8 @@
 {
-  "name": "master-module",
-  "version": "1.0.0",
-  "description": "Master module/skeleton for javascript projects",
-  "main": "dist/plain/main.js",
+  "name": "softlicense",
+  "version": "0.0.1",
+  "description": "Javascript library for license generating and checking",
+  "main": "dist/packed/softlicense.js",
   "scripts": {
     "clean": "grunt clean",
     "test": "grunt test",
@@ -15,6 +15,7 @@
   "author": "Dominik Weidenfeld",
   "devDependencies": {
     "babel": "^5.1.13",
+    "chai": "^2.3.0",
     "grunt": "^0.4.5",
     "grunt-babel": "^5.0.0",
     "grunt-cli": "^0.1.13",
@@ -29,7 +30,6 @@
     "mocha": "^2.2.4"
   },
   "dependencies": {
-    "jquery": "^2.1.3",
-    "jquery-ui": "^1.10.5"
+    "minimist": "^1.1.1"
   }
 }
