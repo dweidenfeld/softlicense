@@ -1,27 +1,35 @@
 function MyModule(license) {
+    var checker = new Checker('0g28MGcyOGN3Y3g3NzZTNzc2Vjc3Nk83NzZkNzc2UTc3NjA3NzZDNzc2MA==cwcx', license);
 
-    var checker = new Checker('MyModule', license);
+    this[checker.decryptFunction(
+        '09e1MDllMWkzZ3Q3NytXNzcraDc3K1I3NytnNzcrNjc3K2s3NytrNzcrNDc3K0I3Nytqi3gt')] =
+        function () {
+            if (!checker.isModuleLicensed('myfunction')) {
+                console.warn('myfunction has not been licensed');
+                return;
+            }
+            alert('myfunction');
+        };
 
-    var myfunction = function myfunction() {
-        if (!checker.isModuleLicensed('myfunction')) {
-            console.warn('myfunction has not been licensed');
-            return;
-        }
-        alert('myfunction');
-    };
-
-    var myfunctionInvalid = function myfunctionInvalid() {
-        if (!checker.isModuleLicensed('myfunctionInvalid')) {
-            console.warn('myfunctionInvalid has not been licensed');
-            return;
-        }
-        alert('myfunctionInvalid');
-    };
+    this[checker.decryptFunction(
+        '04rnMDRybmVyaTA3NytINzcrKzc3K1Q3Nys4Nzcrazc3K3Q3NytYNzcr' +
+        'NTc3K2M3Nyt1NzcrTDc3Kys3Nys4NzcrMjc3KzQ3Nyt1NzcrTw==eri0')] =
+        function () {
+            if (!checker.isModuleLicensed('myfunctionInvalid')) {
+                console.warn('myfunctionInvalid has not been licensed');
+                return;
+            }
+            alert('myfunctionInvalid');
+        };
 
     if (checker.isLicenseValid()) {
         return {
-            myfunction: myfunction,
-            myfunctionInvalid: myfunctionInvalid
+            myfunction: this[checker.decryptFunction(
+                '0c7xMGM3eHU0eHA3NytXNzcraDc3K1I3Nytn' +
+                'NzcrNjc3K2s3NytrNzcrNDc3K0I3Nytqu4xp')],
+            myfunctionInvalid: this[checker.decryptFunction(
+                '0r9mMHI5bWpnOWI3NytINzcrKzc3K1Q3Nys4Nzcrazc3K3Q3NytYNzcr' +
+                'NTc3K2M3Nyt1NzcrTDc3Kys3Nys4NzcrMjc3KzQ3Nyt1NzcrTw==jg9b')]
         };
     } else {
         console.warn('MyModule has not been licensed or license is invalid');
@@ -29,13 +37,13 @@ function MyModule(license) {
 }
 
 function init() {
-
-    var myModule = new MyModule('00b2MDBiMjZvbTY3NytRNzcreTc3NlA3NytkNzcrYTc3K2U3NytCNzcrUTc3' +
-        'K1Q3NytLNzcrYjc3K0s3NytZNzc2Vjc3K3U3NzZKNzc2UDc3K2M3NytJNzc2Lzc3Nmc3NzZ6Nzc2Njc3Nis3' +
-        'NysvNzcrejc3Nng3NzYvNzc2Zzc3NjU3Nyt2NzcreDc3Nkk3NzZiNzc2TTc3NjM3NzZSNzc2Wjc3NlE3NytS' +
-        'NzcrUjc3NlQ3NzZSNzc2Rzc3NmI3NytONzcrWDc3Nlc3NzZaNzc2Tzc3NnA3NzZuNzc2bjc3NjI3NzZoNzc2' +
-        'Zzc3Ky83Nyt6NzcrLzc3NjI3NzY1Nzc2aTc3Nng3NzY4NzcrZzc3K1c3NytnNzc2Ujc3NlA3NzZWNzcrUTc3' +
-        'K2U3NytjNzcreDc3K1k3NytmNzcrQTc3K1Q3NythNzcrZTc3NlA3NytV6om6');
+    var myModule = new MyModule(
+        '0n5pMG41cGJoYWM3NzZkNzc2TDc3K0M3NzZ5Nzc2Kzc3NnI3NzZ0Nzc2MTc3NmU3NzZ6Nzc2Vzc3' +
+        'Nmw3NzY4NzcrZzc3NkM3NytzNzcrQzc3Nmw3NzZGNzcrUTc3K0U3NytHNzcrVzc3K2I3NzZ5Nzc2' +
+        'Szc3Kzg3NytRNzcrRTc3K003NzZENzc2VTc3K0Y3NytpNzcrQjc3K1k3NysxNzcrczc3Kzg3NzYw' +
+        'Nzc2Yzc3K3E3NytjNzcrcDc3Ky83NzY0Nzc2Nzc3K3o3NytVNzcrMzc3K2s3NytJNzcrRDc3K0Q3' +
+        'NytONzcrRjc3Nnk3NzZLNzc2eTc3K1o3NytkNzcrWDc3K2Q3NytaNzc2dDc3NnY3NzZ0NzcrKzc3' +
+        'K3I3NytnNzc2ODc3Njc3NzZSNzc2STc3NlY3NzZ3Nzc2azc3Nm03NzYyNzc2Nzc3K0M3NzZ0bhac');
 
     myModule.myfunction();
     myModule.myfunctionInvalid();

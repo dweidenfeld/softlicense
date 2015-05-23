@@ -13,6 +13,12 @@ export function usage() {
                 --startDate yyyy-mm-dd
                 --endDate yyyy-mm-dd
                 --modules moduleA,moduleB,moduleC
+            "crypt"
+                --input [string]
+            "decrypt"
+                --input [string]
+                --privateKey [private key]
+                --license [license]
             "check"
                 --license [license]`);
 }

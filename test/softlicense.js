@@ -2,7 +2,7 @@ import Generator from '../src/Generator';
 import Checker from '../src/Checker';
 import chai from 'chai';
 
-describe('Generator and Checker', () => {
+describe('SoftLicense', () => {
     let generator = new Generator('testModule');
 
     describe('_generateSalt', () => {
@@ -16,7 +16,13 @@ describe('Generator and Checker', () => {
         let license = generator.generate({
             modules: 'a,b,c'
         });
-        let checker = new Checker('testModule', license);
+
+        it('should contain a private key and license string', () => {
+            chai.expect(license).to.have.property('privateKey');
+            chai.expect(license).to.have.property('license');
+        });
+
+        let checker = new Checker(license.privateKey, license.license);
 
         it('should be valid', () => {
             chai.expect(checker.isLicenseValid()).to.be.true;
@@ -36,7 +42,13 @@ describe('Generator and Checker', () => {
             startDate: new Date(0),
             endDate: new Date(1)
         });
-        let checker = new Checker('testModule', license);
+
+        it('should contain a private key and license string', () => {
+            chai.expect(license).to.have.property('privateKey');
+            chai.expect(license).to.have.property('license');
+        });
+
+        let checker = new Checker(license.privateKey, license.license);
 
         it('should be invalid', () => {
             chai.expect(checker.isLicenseValid()).to.be.false;
