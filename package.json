@@ -2,7 +2,10 @@
   "name": "softlicense",
   "version": "1.1.0-alpha",
   "description": "Javascript library for license generating and checking",
-  "main": "dist/packed/softlicense.js",
+  "main": "dist/packed/Checker.js",
+  "bin": {
+    "softlicense-cli": "./main.js"
+  },
   "scripts": {
     "clean": "grunt clean",
     "test": "grunt test",
@@ -13,6 +16,14 @@
     "default": "npm run clean && npm run test && npm run lint && npm run build && npm run compress"
   },
   "author": "Dominik Weidenfeld",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dweidenfeld/softlicense"
+  },
+  "bugs": {
+    "url": "https://github.com/dweidenfeld/softlicense/issues"
+  },
+  "license": "MIT",
   "devDependencies": {
     "babel": "^5.1.13",
     "chai": "^2.3.0",

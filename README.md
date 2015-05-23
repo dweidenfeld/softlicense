@@ -3,6 +3,7 @@
 SoftLicense is a javascript library for generating software licenses and checking them in your code.
 
 ## Installation
+    npm install softlicense -g
     npm install softlicense --save
 
 ## Usage
@@ -10,14 +11,14 @@ SoftLicense is a javascript library for generating software licenses and checkin
 ### Generate a license
 Read the manual by executing
 
-    node softlicense
+    softlicense-cli
 
 Minimal execution for endless license for MyModule
 
-    node softlicense --action generate --moduleName MyModule
+    softlicense-cli --action generate --moduleName MyModule
 
 ### Check a license (CLI)
-    node softlicense-cli --action check --moduleName testmodule --license ...
+    softlicense-cli --action check --moduleName testmodule --license ...
 
 ### Check a license (programmatically)
 
