@@ -7,7 +7,7 @@ describe('SoftLicense', () => {
 
   describe('_generateSalt', () => {
     it('salt should have 8 characters', () => {
-      let salt = generator._generateSalt(8);
+      let salt = Generator._generateSalt(8);
       chai.expect(salt).to.have.length(8);
     });
   });
