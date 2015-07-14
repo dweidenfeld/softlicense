@@ -27,14 +27,14 @@ module.exports = function (grunt) {
 		babel: {
 			options: {
 				sourceMap: true,
-				modules: [ 'umd' ]
+				modules: 'umd'
 			},
 			dist: {
 				files: [{
 					expand: true,
 					cwd: './src',
 					src: [ '**/*.js' ],
-					dest: './dist/plain',
+					dest: './dist/plain'
 				}]
 			}
 		},
