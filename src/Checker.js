@@ -24,6 +24,11 @@ export default class Checker {
         valid = false;
       }
     }
+    if (Checker._def(this.license.domain)) {
+      if (window.location.hostname !== this.license.domain) {
+        valid = false;
+      }
+    }
     return valid;
   }
 

@@ -10,6 +10,7 @@ export default class Generator {
     let startDate = options.startDate || null;
     let endDate = options.endDate || null;
     let modules = options.modules || null;
+    const domain = options.domain || null;
 
     if (null !== startDate) {
       startDate = new Date(startDate);
@@ -25,7 +26,8 @@ export default class Generator {
       moduleName: this.moduleName,
       startDate: startDate,
       endDate: endDate,
-      modules: modules
+      modules: modules,
+      domain: domain
     };
 
     return {

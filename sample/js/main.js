@@ -1,5 +1,5 @@
 function MyModule(license) {
-    var checker = new Checker('0g28MGcyOGN3Y3g3NzZTNzc2Vjc3Nk83NzZkNzc2UTc3NjA3NzZDNzc2MA==cwcx', license);
+    var checker = new Checker('0xtnMHh0bnFpdDE3NzZTNzc2Vjc3Nk83NzZkNzc2UTc3NjA3NzZDNzc2MA==qit1', license);
 
     this[checker.decryptFunction(
         '09e1MDllMWkzZ3Q3NytXNzcraDc3K1I3NytnNzcrNjc3K2s3NytrNzcrNDc3K0I3Nytqi3gt')] =
@@ -38,12 +38,7 @@ function MyModule(license) {
 
 function init() {
     var myModule = new MyModule(
-        '0n5pMG41cGJoYWM3NzZkNzc2TDc3K0M3NzZ5Nzc2Kzc3NnI3NzZ0Nzc2MTc3NmU3NzZ6Nzc2Vzc3' +
-        'Nmw3NzY4NzcrZzc3NkM3NytzNzcrQzc3Nmw3NzZGNzcrUTc3K0U3NytHNzcrVzc3K2I3NzZ5Nzc2' +
-        'Szc3Kzg3NytRNzcrRTc3K003NzZENzc2VTc3K0Y3NytpNzcrQjc3K1k3NysxNzcrczc3Kzg3NzYw' +
-        'Nzc2Yzc3K3E3NytjNzcrcDc3Ky83NzY0Nzc2Nzc3K3o3NytVNzcrMzc3K2s3NytJNzcrRDc3K0Q3' +
-        'NytONzcrRjc3Nnk3NzZLNzc2eTc3K1o3NytkNzcrWDc3K2Q3NytaNzc2dDc3NnY3NzZ0NzcrKzc3' +
-        'K3I3NytnNzc2ODc3Njc3NzZSNzc2STc3NlY3NzZ3Nzc2azc3Nm03NzYyNzc2Nzc3K0M3NzZ0bhac');
+        '0twaMHR3YTF4ZG03NzZvNzcrRDc3Nmg3NzZFNzc2VDc3NkY3NzZZNzc2Yzc3Nkc3NzYrNzc2Sjc3K2w3NysyNzcrLzc3NnE3NzZrNzc2VTc3NnM3NzZhNzc2ejc3Kys3NytoNzc2Sjc3Ky83NzZMNzc2Kzc3Nk03NzZ6Nzc2djc3Nno3NzZ4Nzc2cjc3NnM3NzZNNzcrMzc3NnM3NytHNzcrUDc3Nkg3NzZZNzcrSjc3K2s3NytCNzcrbzc3K2g3NzYvNzc2bzc3K2g3NytaNzcrMDc3K2I3NzZ0Nzc2Kzc3K283NytnNzcrODc3K2g3NysxNzcrTDc3K2k3NzZ1Nzc2eDc3K283NytoNzc2Zzc3NlA3Nyt2NzcrVjc3Nlo3NzZaNzc2Vjc3NjU3NzZSNzc2ajc3NkU3NzZ6Nzc2Lzc3Ky83NytvNzcrdjc3NlE3NzZ0Nzc2QTc3Nno3NzZ6Nzc2QTc3NnQ3NzZRNzcrSDc3K3I3NytINzc2aTc3Nmg3NzY4Nzc2Szc3Nm83NzY1Nzc2VTc3Nng3NzZZNzc2Ujc3K1A3NzZQ1xdm');
 
     myModule.myfunction();
     myModule.myfunctionInvalid();
