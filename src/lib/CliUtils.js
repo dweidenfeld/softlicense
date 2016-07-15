@@ -13,6 +13,7 @@ export function usage() {
                 --startDate yyyy-mm-dd
                 --endDate yyyy-mm-dd
                 --modules moduleA,moduleB,moduleC
+                --domain my.domain.com
             "crypt"
                 --input [string]
             "decrypt"
