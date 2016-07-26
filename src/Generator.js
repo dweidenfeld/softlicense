@@ -30,10 +30,12 @@ export default class Generator {
       domain: domain
     };
 
-    return {
-      privateKey: Generator.crypt(this.moduleName, null),
-      license: Generator.crypt(JSON.stringify(licenseInfo), this.moduleName)
-    };
+    const privateKey = Generator.crypt(this.moduleName, null);
+    const license = Generator.crypt(JSON.stringify(licenseInfo), this.moduleName);
+
+    licenseInfo.privateKey = privateKey;
+    licenseInfo.license = license;  
+    return licenseInfo;
   }
 
   cryptFunction(functionName) {

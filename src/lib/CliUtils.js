@@ -13,7 +13,7 @@ export function usage() {
                 --startDate yyyy-mm-dd
                 --endDate yyyy-mm-dd
                 --modules moduleA,moduleB,moduleC
-                --domain my.domain.com
+                --domain '^((sub|www)\\.)?domain.com$' (regex)
             "crypt"
                 --input [string]
             "decrypt"

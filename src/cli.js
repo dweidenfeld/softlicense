@@ -10,8 +10,8 @@ let checker = null;
 switch (params.action) {
   case 'generate':
     let license = generator.generate(params);
-    console.log('PrivateKey: ' + license.privateKey);
-    console.log('License: ' + license.license);
+    console.log('LicenseInfo:');
+    console.log(JSON.stringify(license, null, 2));
     break;
   case 'crypt':
     if (!params.input) {
