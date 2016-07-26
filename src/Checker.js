@@ -25,7 +25,8 @@ export default class Checker {
       }
     }
     if (Checker._def(this.license.domain)) {
-      if (window.location.hostname !== this.license.domain) {
+      const domainRegex = new RegExp(this.license.domain, 'i');
+      if (domainRegex.test(window.location.hostname)) {
         valid = false;
       }
     }
