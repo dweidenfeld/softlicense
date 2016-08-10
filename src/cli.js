@@ -8,8 +8,17 @@ let generator = new Generator(params.moduleName);
 let checker = null;
 
 switch (params.action) {
-  case 'generate':
-    let license = generator.generate(params);
+  case 'generate-privatekey':
+    let privateKey = generator.generatePrivateKey(params);
+    console.log('PrivateKey: ' + privateKey);
+    break;
+  case 'generate-license':
+    if (!params.privateKey) {
+      CliUtils.usage();
+      console.warn('specify private key with "--privateKey"');
+      CliUtils.exit(3);
+    }
+    let license = generator.generateLicense(params);
     console.log('LicenseInfo:');
     console.log(JSON.stringify(license, null, 2));
     break;
@@ -19,7 +28,12 @@ switch (params.action) {
       console.warn('specify input with "--input"');
       CliUtils.exit(3);
     }
-    console.log('Crypted: ' + generator.cryptFunction(params.input));
+    if (!params.privateKey) {
+      CliUtils.usage();
+      console.warn('specify private key with "--privateKey"');
+      CliUtils.exit(3);
+    }
+    console.log('Crypted: ' + generator.cryptFunction(params.input, params.privateKey));
     break;
   case 'decrypt':
     if (!params.privateKey) {

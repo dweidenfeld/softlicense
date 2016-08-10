@@ -3,7 +3,7 @@ module.exports = function (grunt) {
 
 	grunt.registerTask('test', ['mochaTest']);
 	grunt.registerTask('lint', ['jshint']);
-	grunt.registerTask('compress', ['uglify', 'packer']);
+	grunt.registerTask('compress', ['uglify']);
 	grunt.registerTask('build', ['babel']);
 
 	grunt.initConfig({

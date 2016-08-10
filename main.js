@@ -1,2 +1,2 @@
 #!/usr/bin/env node
-require('./dist/packed/CLI');
+require('./dist/min/CLI');
