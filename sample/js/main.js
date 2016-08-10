@@ -1,5 +1,5 @@
 function MyModule(license) {
-    var checker = new Checker('0xtnMHh0bnFpdDE3NzZTNzc2Vjc3Nk83NzZkNzc2UTc3NjA3NzZDNzc2MA==qit1', license);
+    var checker = new Checker('0gnlMGdubGF5dDU3NzZTNzc2Vjc3Nk83NzZkNzc2UTc3NjA3NzZDNzc2MA==ayt5', license);
 
     this[checker.decryptFunction(
         '09e1MDllMWkzZ3Q3NytXNzcraDc3K1I3NytnNzcrNjc3K2s3NytrNzcrNDc3K0I3Nytqi3gt')] =
@@ -38,7 +38,7 @@ function MyModule(license) {
 
 function init() {
     var myModule = new MyModule(
-        '0twaMHR3YTF4ZG03NzZvNzcrRDc3Nmg3NzZFNzc2VDc3NkY3NzZZNzc2Yzc3Nkc3NzYrNzc2Sjc3K2w3NysyNzcrLzc3NnE3NzZrNzc2VTc3NnM3NzZhNzc2ejc3Kys3NytoNzc2Sjc3Ky83NzZMNzc2Kzc3Nk03NzZ6Nzc2djc3Nno3NzZ4Nzc2cjc3NnM3NzZNNzcrMzc3NnM3NytHNzcrUDc3Nkg3NzZZNzcrSjc3K2s3NytCNzcrbzc3K2g3NzYvNzc2bzc3K2g3NytaNzcrMDc3K2I3NzZ0Nzc2Kzc3K283NytnNzcrODc3K2g3NysxNzcrTDc3K2k3NzZ1Nzc2eDc3K283NytoNzc2Zzc3NlA3Nyt2NzcrVjc3Nlo3NzZaNzc2Vjc3NjU3NzZSNzc2ajc3NkU3NzZ6Nzc2Lzc3Ky83NytvNzcrdjc3NlE3NzZ0Nzc2QTc3Nno3NzZ6Nzc2QTc3NnQ3NzZRNzcrSDc3K3I3NytINzc2aTc3Nmg3NzY4Nzc2Szc3Nm83NzY1Nzc2VTc3Nng3NzZZNzc2Ujc3K1A3NzZQ1xdm');
+        '0zklMHprbDlqNWE3NytTNzc2cTc3Nmg3NzY0Nzc2RTc3K2M3NytsNzc2Njc3Nms3NzZINzc2STc3Kzc3NzZuNzcrSDc3K2E3NytQNzcrVDc3NjE3NzZXNzc2Yzc3NmQ3NzY0Nzc2dTc3K203NzZmNzc2eTc3NnQ3NzZ3Nzc2eTc3K3c3NzY1NzcraDc3NjA3NyszNzcrTTc3K3U3NytHNzcrMjc3Nmk3NysvNzcrVzc3K1o3NysxNzc2ODc3NlQ3NzZwNzcrSDc3Nm03NytRNzcrZjc3K2Q3NytMNzcrTTc3NjU3NzZzNzc2Lzc3K083NytWNzc2dzc3K203NzZrNzcrOTc3K2o3NzYxNzcrcjc3Nnk3NzYvNzc2czc3NmU3NzZWNzcrbDc3KzQ3Nyt2Nzc2RDc3Nko3NytoNzc2bjc3Nks3NzY3Nzcrcjc3Njg3Nys1NzcrRDc3K1g3NzZNNzc2Mjc3Nmg3NytkNzc2Yzc3Nm43NzYxNzcrMjc3Nkc3NzZuNzc2NTc3K3A=9j5a');
 
     myModule.myfunction();
     myModule.myfunctionInvalid();

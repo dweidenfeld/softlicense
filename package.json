@@ -1,8 +1,8 @@
 {
   "name": "softlicense",
-  "version": "2.4.0-alpha",
+  "version": "3.0.0",
   "description": "Javascript library for license generating and checking",
-  "main": "dist/packed/Checker.js",
+  "main": "dist/min/Checker.js",
   "bin": {
     "softlicense-cli": "./main.js"
   },

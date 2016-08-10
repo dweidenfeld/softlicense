@@ -6,11 +6,20 @@ export default class Generator {
     this.moduleName = moduleName;
   }
 
-  generate(options) {
+  generatePrivateKey(options) {
+    return Generator.crypt(this.moduleName, null);
+  }
+
+  generateLicense(options) {
     let startDate = options.startDate || null;
     let endDate = options.endDate || null;
     let modules = options.modules || null;
+    const privateKey = options.privateKey;
     const domain = options.domain || null;
+
+    if (!privateKey) {
+      throw new Error('privateKey must be specified');
+    }
 
     if (null !== startDate) {
       startDate = new Date(startDate);
@@ -30,16 +39,13 @@ export default class Generator {
       domain: domain
     };
 
-    const privateKey = Generator.crypt(this.moduleName, null);
-    const license = Generator.crypt(JSON.stringify(licenseInfo), this.moduleName);
+    licenseInfo.license = Generator.crypt(JSON.stringify(licenseInfo), privateKey);
 
-    licenseInfo.privateKey = privateKey;
-    licenseInfo.license = license;  
     return licenseInfo;
   }
 
-  cryptFunction(functionName) {
-    return Generator.crypt(functionName, this.moduleName);
+  cryptFunction(functionName, privateKey) {
+    return Generator.crypt(functionName, privateKey);
   }
 
   static crypt(str, pSalt) {

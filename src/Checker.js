@@ -3,16 +3,16 @@ import Base64 from './lib/Base64';
 export default class Checker {
 
   constructor(privateKey, license) {
-    this.moduleName = Checker.decrypt(privateKey, null, false);
+    this.privateKey = privateKey;
     try {
-      this.license = JSON.parse(Checker.decrypt(license, this.moduleName, true));
+      this.license = JSON.parse(Checker.decrypt(license, privateKey, true));
     } catch (e) {
       throw new Error('cannot parse license', e);
     }
   }
 
   isLicenseValid() {
-    let valid = this.moduleName === this.license.moduleName;
+    let valid = true;
     let now = new Date();
     if (Checker._def(this.license.startDate)) {
       if (new Date(this.license.startDate) > now) {
@@ -42,7 +42,7 @@ export default class Checker {
   }
 
   decryptFunction(hash) {
-    return Checker.decrypt(hash, this.moduleName, false);
+    return Checker.decrypt(hash, this.privateKey, false);
   }
 
   static decryptFunctionOfModule(hash, moduleName) {
@@ -50,6 +50,10 @@ export default class Checker {
   }
 
   static decrypt(str, pSalt, objectFix) {
+    if (!str) {
+      throw new Error('license is empty');
+    }
+
     let salt = str.substr(0, 4) + str.substr(str.length - 4);
     let strArr = Base64.decode(Base64.decode(str.substr(4, str.length - 8)).substr(salt.length)).split('');
     for (let i = 0; i < strArr.length; i++) {

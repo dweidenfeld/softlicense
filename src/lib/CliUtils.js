@@ -9,18 +9,22 @@ export function usage() {
   console.log(
     `softlicense-cli --action [action] --moduleName [moduleName]
          [action]
-            "generate"
-                --startDate yyyy-mm-dd
-                --endDate yyyy-mm-dd
-                --modules moduleA,moduleB,moduleC
+            "generate-privatekey"
+            "generate-license"
+                --privateKey [private key]
+                --startDate [yyyy-mm-dd]
+                --endDate [yyyy-mm-dd]
+                --modules [moduleA,moduleB,moduleC]
                 --domain '^((sub|www)\\.)?domain.com$' (regex)
             "crypt"
+                --privateKey [private key]
                 --input [string]
             "decrypt"
-                --input [string]
                 --privateKey [private key]
                 --license [license]
+                --input [string]
             "check"
+                --privateKey [private key]
                 --license [license]`);
 }
 
